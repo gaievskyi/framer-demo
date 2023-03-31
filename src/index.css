@@ -1,0 +1,280 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark: black;
+  --light: #eeeeee;
+  --gradient: linear-gradient(10deg, #ffaa00, #ff6a00);
+  --gradient2: linear-gradient(15deg, #04ea00, #00d17d);
+  --gradient3: linear-gradient(15deg, #b648ff, #ef5dff);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--dark);
+  font-family: 'Century Gothic', sans-serif;
+  height: 100%;
+  color: white;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh 15vw;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-y: hidden;
+}
+
+span {
+  color: #ff9d00;
+  font-weight: 600;
+  font-size: 1.25rem;
+  font-family: 'Century Gothic', sans-serif;
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+h1 {
+  color: #ff9d00;
+  font-size: 175%;
+  font-weight: 400;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 150%;
+  letter-spacing: 0;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+h3 {
+  text-align: center;
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-family: 'Century Gothic', sans-serif;
+  padding: 2rem 0 1.5rem 0;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+h5 {
+  text-align: center;
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 130%;
+  text-align: justify;
+  letter-spacing: 0;
+  font-family: 'Century Gothic', sans-serif;
+  padding: 0;
+  line-height: 125%;
+  margin: 0;
+}
+
+kbd {
+  background: #eee;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px #00000028, 0 2px 0 0 #ffffffc3 inset;
+  color: #131313;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+  margin: auto;
+}
+
+button {
+  width: auto;
+  height: 3rem;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 1.25px;
+  cursor: default;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000000e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+.modal {
+  width: clamp(50%, 700px, 90%);
+  height: min(50%, 300px);
+  margin: auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.orange-gradient {
+  background: var(--gradient);
+}
+
+.green-gradient {
+  background: var(--gradient2);
+}
+
+.pink {
+  color: #c273ff;
+}
+
+.gray {
+  color: #666666;
+}
+
+.light-blue {
+  color: #00b7ff;
+}
+
+.modal-button {
+  margin-top: 2rem;
+  padding: 0 3rem;
+  min-height: 3rem;
+  background: var(--dark);
+  color: var(--light);
+}
+
+.save-button {
+  padding: 0 1rem;
+  background: var(--gradient);
+  color: var(--dark);
+}
+
+.close-button {
+  padding: 0 2rem;
+  height: 2.5rem;
+  background-color: #101111;
+  color: #ffaa00;
+  transition: background-color ease 400ms;
+  box-shadow: 1px 1px 15px #03030399;
+}
+
+.input {
+  min-height: 3rem;
+  padding: 1rem;
+  outline: none;
+  background: white;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 50vw;
+  height: 50%;
+  margin: auto;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0;
+  top: 0.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.bottom {
+  justify-content: flex-end;
+}
+
+.top {
+  justify-content: flex-start;
+}
+
+li {
+  width: 225px;
+  margin: 0.5rem 1.5rem;
+  padding: 0 1rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.notification-text {
+  margin: auto auto auto 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+.enqueue-button {
+  padding: 0 1rem;
+  background: var(--gradient2);
+  color: var(--dark);
+}
+
+.close {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close svg {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.sub-header {
+  color: #ccc;
+}
+
+@media screen and (min-width: 960px) {
+  button {
+    cursor: pointer;
+  }
+  .input,
+  input {
+    width: calc(25vw);
+  }
+  h1 {
+    color: #ff9d00;
+    font-size: 250%;
+  }
+}
