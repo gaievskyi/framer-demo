@@ -21,29 +21,34 @@ export const AutoAnimateTodo = () => {
   }
 
   return (
-    <div className="p-8 space-y-4">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="enabled" className="flex mb-5">
+    <div className="my-5 space-y-4 flex flex-col justify-center items-center">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col justify-center items-center gap-3"
+      >
+        <label htmlFor="enabled" className="flex">
           Animations Enabled
-          <input
-            onChange={toggleEnabled}
-            type="checkbox"
-            id="enabled"
-            checked={isEnabled}
-          />
         </label>
         <input
-          autoComplete="off"
-          id="name"
-          className="border-2 border-blue-500 rounded-lg mr-2 p-1 text-black"
-          placeholder="Add new event"
+          onChange={toggleEnabled}
+          type="checkbox"
+          id="enabled"
+          checked={isEnabled}
         />
-        <button className="bg-blue-500 text-white rounded-lg px-2 py-1">
-          Submit
-        </button>
+        <div>
+          <input
+            autoComplete="off"
+            id="name"
+            className="border-2 border-blue-500 rounded-lg mr-2 p-1 text-black"
+            placeholder="Add new event"
+          />
+          <button className="bg-blue-500 text-white rounded-lg px-2 py-1">
+            Submit
+          </button>
+        </div>
       </form>
       <h1 className="flex justify-center w-full">Upcoming Events</h1>
-      <div ref={parent} className="grid grid-cols-3 gap-2">
+      <div ref={parent} className="grid grid-cols-3 gap-3">
         {items.map((item) => (
           <GridItem key={item.name} item={item} />
         ))}

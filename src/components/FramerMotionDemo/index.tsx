@@ -38,7 +38,7 @@ export const FramerMotionDemo: React.FC = () => {
   return (
     <>
       <motion.main>
-        <Header />
+        <Header text="Framer motion" technology="⚛️ React" />
         <SubHeader text="Animated modals" />
         <ModalSettings onVariantChange={handleModalVariant} onOpen={open} />
         <SubHeader text="Toasts / snackbars / notifiers" />
@@ -49,6 +49,7 @@ export const FramerMotionDemo: React.FC = () => {
           onPositionChange={handlePosition}
           onEnqueue={enqueue}
         />
+        <Header text="@formkit/auto-animate" />
         <AutoAnimateList />
         <AutoAnimateTodo />
       </motion.main>

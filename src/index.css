@@ -29,7 +29,7 @@ main {
   justify-content: center;
   padding: 1vh 15vw;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   overflow-y: hidden;
 }
 
@@ -39,7 +39,7 @@ span {
   font-size: 1.25rem;
   font-family: 'Century Gothic', sans-serif;
   display: flex;
-  padding: 0.5rem 0;
+  padding: 0.25rem 0;
 }
 
 h1 {

@@ -4,7 +4,7 @@ import { useAutoAnimate } from '@formkit/auto-animate/react'
 export const AutoAnimateList = () => {
   const [items, setItems] = useState<number[]>([])
   const [parent, enableAnimations] = useAutoAnimate()
-  const add = () => setItems([...items, items.length])
+  const add = () => setItems([...items, items.length + 1])
 
   return (
     <>

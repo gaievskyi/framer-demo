@@ -1,8 +1,13 @@
 import { motion } from 'framer-motion'
 
-export const Header = () => (
-  <motion.h1 className="pink">
-    Framer Motion
-    <span className="light-blue"> ⚛️ React</span>
+type HeaderProps = {
+  text: string
+  technology?: string
+}
+
+export const Header = ({ text, technology }: HeaderProps) => (
+  <motion.h1 className="pink mt-5">
+    {text}
+    {technology && <span className="light-blue">{technology}</span>}
   </motion.h1>
 )
